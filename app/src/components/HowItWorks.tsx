@@ -35,11 +35,11 @@ const HowItWorks = () => {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <Button size="lg" className="bg-crypto-purple hover:bg-crypto-dark-purple text-white px-8">
             Create Free Account
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

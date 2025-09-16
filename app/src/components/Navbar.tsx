@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <h1 className="text-2xl font-bold text-white">
-            Crypto<span className="text-crypto-purple">Flow</span>
+            Dobby<span className="text-crypto-purple">Snap</span>
           </h1>
         </div>
 
@@ -37,7 +37,7 @@ const Navbar = () => {
               How it works
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="#testimonials" className="text-gray-300 hover:text-white transition-colors">
               Testimonials
             </a>
@@ -51,15 +51,15 @@ const Navbar = () => {
             <a href="#faq" className="text-gray-300 hover:text-white transition-colors">
               FAQ
             </a>
-          </li>
+          </li> */}
         </ul>
 
         <div className="hidden lg:flex items-center space-x-4">
-          <Button variant="ghost" className="text-gray-300 hover:text-white">
+          {/* <Button variant="ghost" className="text-gray-300 hover:text-white">
             Login
-          </Button>
+          </Button> */}
           <Link to="#!">
-            <Button className="bg-crypto-purple hover:bg-crypto-dark-purple text-white w-full">Buy Now</Button>
+            <Button className="bg-crypto-purple hover:bg-crypto-dark-purple text-white w-full">Subscribe Now</Button>
           </Link>
         </div>
 

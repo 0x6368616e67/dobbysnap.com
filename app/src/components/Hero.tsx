@@ -14,26 +14,21 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 animate-fade-in-left">
-            <div className="inline-flex items-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
-              <span className="text-xs font-medium text-crypto-purple mr-2">New Feature</span>
-              <span className="text-xs text-gray-300">AI-Powered Trading Signals</span>
-              <ChevronRight className="h-4 w-4 text-gray-400 ml-1" />
-            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              <span className="text-gradient">Trade Crypto</span> with Confidence & Clarity
+              <span className="text-gradient">Dobby Snap</span> 
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-lg">
               Experience seamless cryptocurrency trading with real-time analytics, AI-powered insights, and zero commission fees.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-crypto-purple hover:bg-crypto-dark-purple text-white px-8 py-6">
-                Start Trading
+                Start 
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="border-gray-700 text-white hover:bg-white/5 py-6">
+              {/* <Button variant="outline" size="lg" className="border-gray-700 text-white hover:bg-white/5 py-6">
                 View Demo
                 <ArrowUpRight className="ml-2 h-5 w-5" />
-              </Button>
+              </Button> */}
             </div>
             <div className="mt-8 flex items-center space-x-6">
               <div>
