@@ -28,9 +28,9 @@ const Index = () => {
       <Features />
       <HowItWorks />
       {/* <Testimonials />
+      <CTA /> */}
       <Pricing />
       <FAQ />
-      <CTA /> */}
       <Footer />
       <ScrollToTop />
     </div>

@@ -23,13 +23,13 @@ const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-            Simple, Transparent Pricing
+            定价方案
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-            Choose the plan that best fits your trading needs. All plans include our core platform features.
+            我们提供三种标准月度订阅方案：Creative Base、Creative Pro、和 Creative Enterprise。根据你的节奏与目标，选择最适合的并可随时升级。我们也支持按项目报价，请联系预约沟通以获取详细方案
           </p>
           
-          <div className="inline-flex p-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
+          {/* <div className="inline-flex p-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
             <button
               className={`px-4 py-2 rounded-full transition-colors ${
                 billingCycle === 'monthly' ? 'bg-crypto-purple text-white' : 'text-gray-400'
@@ -46,7 +46,7 @@ const Pricing = () => {
             >
               Annual <span className="text-xs font-medium">Save 20%</span>
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -71,7 +71,7 @@ const Pricing = () => {
                   <span className="text-3xl md:text-4xl font-bold text-white">
                     {billingCycle === 'monthly' ? plan.price.monthly : plan.price.annual}
                   </span>
-                  <span className="text-gray-400 ml-1">{plan.price.monthly !== "$0" ? "/month" : ""}</span>
+                  <span className="text-gray-400 ml-1">{plan.price.monthly !== "$0" ? "/月" : ""}</span>
                 </div>
                 <p className="text-gray-400 mb-6">{plan.description}</p>
                 

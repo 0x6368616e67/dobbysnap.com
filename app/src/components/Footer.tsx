@@ -13,7 +13,7 @@ const Footer = () => {
               Dobby<span className="text-crypto-purple">Snap</span>
             </h2>
             <p className="text-gray-400 mb-6 max-w-xs">
-              The most trusted cryptocurrency platform, empowering traders with innovative tools and unparalleled security.
+              面向初创团队的「全生命周期 MVP 引擎」。精灵响指一啪，从 0 到 1 极速验证；需求突变，我们并行切换赛道，持续迭代、复利升级。无论市场转向、方向大调，始终陪你把灵感一步步炼成可用产品，让增长每一步都有魔法加速。
             </p>
             <div className="flex space-x-4">
               <a href="#!" className="text-gray-400 hover:text-crypto-purple transition-colors">

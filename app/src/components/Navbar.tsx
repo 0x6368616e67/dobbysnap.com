@@ -29,29 +29,29 @@ const Navbar = () => {
         <ul className="hidden lg:flex items-center space-x-8">
           <li>
             <a href="#features" className="text-gray-300 hover:text-white transition-colors">
-              Features
+              能力 
             </a>
           </li>
           <li>
             <a href="#how-it-works" className="text-gray-300 hover:text-white transition-colors">
-              How it works
+              协作
             </a>
           </li>
           {/* <li>
             <a href="#testimonials" className="text-gray-300 hover:text-white transition-colors">
               Testimonials
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">
-              Pricing
+              定价
             </a>
           </li>
           <li>
             <a href="#faq" className="text-gray-300 hover:text-white transition-colors">
               FAQ
             </a>
-          </li> */}
+          </li>
         </ul>
 
         <div className="hidden lg:flex items-center space-x-4">
@@ -59,7 +59,7 @@ const Navbar = () => {
             Login
           </Button> */}
           <Link to="#!">
-            <Button className="bg-crypto-purple hover:bg-crypto-dark-purple text-white w-full">Subscribe Now</Button>
+            <Button className="bg-crypto-purple hover:bg-crypto-dark-purple text-white w-full">即刻订阅</Button>
           </Link>
         </div>
 

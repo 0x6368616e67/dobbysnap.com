@@ -9,10 +9,10 @@ const Features = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-            Powerful Features
+            我们的能力  
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            CryptoFlow gives you the edge with advanced tools designed for both beginners and professional traders.
+            DobbySnap 是面向Web3团队的「全生命周期 MVP 引擎」。协助团队从 0 到 1 极速验证；全生命周期陪伴您，把灵感一步步炼成可用产品。
           </p>
         </div>
 

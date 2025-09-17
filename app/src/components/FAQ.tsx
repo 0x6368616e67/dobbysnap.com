@@ -15,11 +15,11 @@ const FAQ = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-            Frequently Asked Questions
+            常见问题
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          {/* <p className="text-gray-400 max-w-2xl mx-auto">
             Got questions about CryptoFlow? We've got answers. If you don't see what you're looking for, reach out to our support team.
-          </p>
+          </p> */}
         </div>
 
         <div className="max-w-3xl mx-auto">

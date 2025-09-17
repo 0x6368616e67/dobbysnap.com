@@ -18,11 +18,11 @@ const Hero = () => {
               <span className="text-gradient">Dobby Snap</span> 
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-lg">
-              Experience seamless cryptocurrency trading with real-time analytics, AI-powered insights, and zero commission fees.
+              多比响指啪一声，陪你从灵光一闪到方向大转弯，全生命周期迭代守护，MVP魔法始终在线！
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-crypto-purple hover:bg-crypto-dark-purple text-white px-8 py-6">
-                Start 
+                打响指 
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               {/* <Button variant="outline" size="lg" className="border-gray-700 text-white hover:bg-white/5 py-6">
@@ -32,18 +32,18 @@ const Hero = () => {
             </div>
             <div className="mt-8 flex items-center space-x-6">
               <div>
-                <p className="text-2xl font-bold text-white">$2.5B+</p>
-                <p className="text-sm text-gray-400">Trading Volume</p>
+                <p className="text-2xl font-bold text-white">1 天</p>
+                <p className="text-sm text-gray-400">沟通需求</p>
               </div>
               <div className="h-12 w-px bg-gray-700"></div>
               <div>
-                <p className="text-2xl font-bold text-white">120K+</p>
-                <p className="text-sm text-gray-400">Active Traders</p>
+                <p className="text-2xl font-bold text-white">1 周</p>
+                <p className="text-sm text-gray-400">初版方案</p>
               </div>
               <div className="h-12 w-px bg-gray-700"></div>
               <div>
-                <p className="text-2xl font-bold text-white">50+</p>
-                <p className="text-sm text-gray-400">Global Markets</p>
+                <p className="text-2xl font-bold text-white">1 月</p>
+                <p className="text-sm text-gray-400">体验 Demo</p>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ const Hero = () => {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400">You Got</p>
+                    <p className="text-xs text-gray-400">To Your</p>
                     <p className="text-lg font-bold text-green-500">MVPs</p>
                   </div>
                 </div>

@@ -9,10 +9,10 @@ const HowItWorks = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-            How It Works
+            如何协作 
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Getting started with CryptoFlow is easy. Follow these simple steps to begin your crypto journey.
+            面向初创团队的「全生命周期 MVP 引擎」
           </p>
         </div>
 
