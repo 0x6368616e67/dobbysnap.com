@@ -1,6 +1,7 @@
 
 import { ArrowRight, ArrowUpRight, ChevronRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -21,10 +22,12 @@ const Hero = () => {
               多比响指啪一声，陪你从灵光一闪到方向大转弯，全生命周期迭代守护，MVP魔法始终在线！
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/subscribe">
               <Button size="lg" className="bg-crypto-purple hover:bg-crypto-dark-purple text-white px-8 py-6">
                 打响指 
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+              </Link>
               {/* <Button variant="outline" size="lg" className="border-gray-700 text-white hover:bg-white/5 py-6">
                 View Demo
                 <ArrowUpRight className="ml-2 h-5 w-5" />

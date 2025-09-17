@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface PricingPlan {
   name: string;
@@ -74,7 +75,7 @@ const Pricing = () => {
                   <span className="text-gray-400 ml-1">{plan.price.monthly !== "$0" ? "/月" : ""}</span>
                 </div>
                 <p className="text-gray-400 mb-6">{plan.description}</p>
-                
+                <Link to="/subscribe#subscribe">
                 <Button 
                   className={`w-full mb-6 ${
                     plan.highlighted 
@@ -84,6 +85,7 @@ const Pricing = () => {
                 >
                   {plan.buttonText}
                 </Button>
+                </Link>
                 
                 <div>
                   <p className="text-sm font-medium text-gray-300 mb-4">What's included:</p>

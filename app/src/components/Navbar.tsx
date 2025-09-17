@@ -21,19 +21,19 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <h1 className="text-2xl font-bold text-white">
-            <a href="#">Dobby<span className="text-crypto-purple">Snap</span> </a>
+            <a href="/">Dobby<span className="text-crypto-purple">Snap</span> </a>
           </h1>
         </div>
 
         {/* Desktop menu */}
         <ul className="hidden lg:flex items-center space-x-8">
           <li>
-            <a href="#features" className="text-gray-300 hover:text-white transition-colors">
+            <a href="/#features" className="text-gray-300 hover:text-white transition-colors">
               能力 
             </a>
           </li>
           <li>
-            <a href="#how-it-works" className="text-gray-300 hover:text-white transition-colors">
+            <a href="/#how-it-works" className="text-gray-300 hover:text-white transition-colors">
               协作
             </a>
           </li>
@@ -43,12 +43,12 @@ const Navbar = () => {
             </a>
           </li> */}
           <li>
-            <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">
+            <a href="/#pricing" className="text-gray-300 hover:text-white transition-colors">
               定价
             </a>
           </li>
           <li>
-            <a href="#faq" className="text-gray-300 hover:text-white transition-colors">
+            <a href="/#faq" className="text-gray-300 hover:text-white transition-colors">
               FAQ
             </a>
           </li>
@@ -58,7 +58,7 @@ const Navbar = () => {
           {/* <Button variant="ghost" className="text-gray-300 hover:text-white">
             Login
           </Button> */}
-          <Link to="#!">
+          <Link to="/subscribe">
             <Button className="bg-crypto-purple hover:bg-crypto-dark-purple text-white w-full">即刻订阅</Button>
           </Link>
         </div>
