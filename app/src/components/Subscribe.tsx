@@ -1,4 +1,16 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogAction,
+  AlertDialogCancel,
+} from '@/components/ui/alert-dialog';
+
 
 const SubscribeForm = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +31,33 @@ const SubscribeForm = () => {
     e.preventDefault();
     console.log('Form submitted:', formData);
     // Add your submission logic here
+     const url = 'https://script.google.com/macros/s/AKfycbxPWBK3C0ZQLUkdAVhR1jUN2irgJ6f8jrOtvrxr48eFy2YOa2ccKeauWBRWJQfz7Tmu2A/exec';
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8',
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Failed to submit form');
+        }
+        return res.json?.() ?? Promise.resolve({});
+      })
+      .then((data) => {
+        // Open success dialog
+        setIsSuccessOpen(true);
+      })
+      .catch((err) => {
+        // Open failure dialog
+        setIsErrorOpen(true);
+      });
   };
+
+  const navigate = useNavigate();
+  const [isSuccessOpen, setIsSuccessOpen] = useState(false);
+  const [isErrorOpen, setIsErrorOpen] = useState(false);
 
   return (
     <section id="subscribe" className="py-24 bg-[#12141C]">
@@ -70,6 +108,35 @@ const SubscribeForm = () => {
         </button>
       </form>
     </div>
+      {/* Success dialog */}
+      <AlertDialog open={isSuccessOpen} onOpenChange={(open) => setIsSuccessOpen(open)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>提交成功</AlertDialogTitle>
+            <AlertDialogDescription>感谢你的订阅，我们会尽快与您联系。</AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction onClick={() => { setIsSuccessOpen(false); navigate('/'); }}>
+              确定
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      {/* Error dialog */}
+      <AlertDialog open={isErrorOpen} onOpenChange={(open) => setIsErrorOpen(open)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>提交失败</AlertDialogTitle>
+            <AlertDialogDescription>提交过程中出现问题，请稍后重试。</AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction onClick={() => { setIsErrorOpen(false); navigate('/'); }}>
+              确定
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </section>
   );
 };
