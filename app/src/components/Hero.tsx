@@ -59,7 +59,7 @@ const Hero = () => {
                 <div className="flex items-center space-x-3">
                   <div className="h-10 w-10 bg-green-500/20 rounded-full flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M21 12H3M12 3v18"/>
+                    <path d="M11 21H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h5l2 3h9a2 2 0 0 1 2 2v2M19 15v6M16 18h6"/>
                     </svg>
                   </div>
                   <div>
@@ -76,8 +76,8 @@ const Hero = () => {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400">From You</p>
-                    <p className="text-lg font-bold text-white">Idea</p>
+                    <p className="text-xs text-gray-400">From Your</p>
+                    <p className="text-lg font-bold text-white">Ideas</p>
                   </div>
                 </div>
               </div>
