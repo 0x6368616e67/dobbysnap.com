@@ -32,6 +32,9 @@ const SubscribeForm = () => {
     console.log('Form submitted:', formData);
     // Add your submission logic here
      const url = 'https://script.google.com/macros/s/AKfycbxPWBK3C0ZQLUkdAVhR1jUN2irgJ6f8jrOtvrxr48eFy2YOa2ccKeauWBRWJQfz7Tmu2A/exec';
+    // open dialog immediately and show loading
+    setIsDialogOpen(true);
+    setStatus('loading');
     fetch(url, {
       method: 'POST',
       headers: {
@@ -46,18 +49,19 @@ const SubscribeForm = () => {
         return res.json?.() ?? Promise.resolve({});
       })
       .then((data) => {
-        // Open success dialog
-        setIsSuccessOpen(true);
+        // show success inside dialog
+        setStatus('success');
       })
       .catch((err) => {
-        // Open failure dialog
-        setIsErrorOpen(true);
+        // show error inside dialog
+        setStatus('error');
       });
   };
 
   const navigate = useNavigate();
-  const [isSuccessOpen, setIsSuccessOpen] = useState(false);
-  const [isErrorOpen, setIsErrorOpen] = useState(false);
+  // dialog open + status: 'idle' | 'loading' | 'success' | 'error'
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   return (
     <section id="subscribe" className="py-24 bg-[#12141C]">
@@ -108,32 +112,49 @@ const SubscribeForm = () => {
         </button>
       </form>
     </div>
-      {/* Success dialog */}
-      <AlertDialog open={isSuccessOpen} onOpenChange={(open) => setIsSuccessOpen(open)}>
+      {/* Unified dialog: shows loading then success/error */}
+      <AlertDialog open={isDialogOpen} onOpenChange={(open) => { setIsDialogOpen(open); if (!open) setStatus('idle'); }}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>提交成功</AlertDialogTitle>
-            <AlertDialogDescription>感谢你的订阅，我们会尽快与您联系。</AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogAction onClick={() => { setIsSuccessOpen(false); navigate('/'); }}>
-              确定
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+            {status === 'loading' && (
+              <>
+                <AlertDialogTitle>正在提交</AlertDialogTitle>
+                <AlertDialogDescription>
+                  <div className="flex items-center justify-center space-x-2">
+                    <svg className="h-6 w-6 animate-spin text-foreground" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                    </svg>
+                    <span>提交中，请稍候…</span>
+                  </div>
+                </AlertDialogDescription>
+              </>
+            )}
 
-      {/* Error dialog */}
-      <AlertDialog open={isErrorOpen} onOpenChange={(open) => setIsErrorOpen(open)}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>提交失败</AlertDialogTitle>
-            <AlertDialogDescription>提交过程中出现问题，请稍后重试。</AlertDialogDescription>
+            {status === 'success' && (
+              <>
+                <AlertDialogTitle>提交成功</AlertDialogTitle>
+                <AlertDialogDescription>感谢你的订阅，我们会尽快与您联系。</AlertDialogDescription>
+              </>
+            )}
+
+            {status === 'error' && (
+              <>
+                <AlertDialogTitle>提交失败</AlertDialogTitle>
+                <AlertDialogDescription>提交过程中出现问题，请稍后重试。</AlertDialogDescription>
+              </>
+            )}
           </AlertDialogHeader>
+
           <AlertDialogFooter>
-            <AlertDialogAction onClick={() => { setIsErrorOpen(false); navigate('/'); }}>
-              确定
-            </AlertDialogAction>
+            {status === 'loading' ? (
+              // while loading, disable action — show a cancel/close that will abort and go home
+              <AlertDialogCancel onClick={() => { setIsDialogOpen(false); setStatus('idle'); navigate('/'); }}>取消</AlertDialogCancel>
+            ) : (
+              <AlertDialogAction onClick={() => { setIsDialogOpen(false); setStatus('idle'); navigate('/'); }}>
+                确定
+              </AlertDialogAction>
+            )}
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
