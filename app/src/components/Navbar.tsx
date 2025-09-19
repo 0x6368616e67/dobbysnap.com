@@ -76,22 +76,17 @@ const Navbar = () => {
             <ul className="flex flex-col space-y-4">
               <li>
                 <a href="#features" className="text-gray-300 hover:text-white transition-colors block py-2" onClick={() => setIsMobileMenuOpen(false)}>
-                  Features
+                  能力 
                 </a>
               </li>
               <li>
                 <a href="#how-it-works" className="text-gray-300 hover:text-white transition-colors block py-2" onClick={() => setIsMobileMenuOpen(false)}>
-                  How it works
-                </a>
-              </li>
-              <li>
-                <a href="#testimonials" className="text-gray-300 hover:text-white transition-colors block py-2" onClick={() => setIsMobileMenuOpen(false)}>
-                  Testimonials
+                  协作
                 </a>
               </li>
               <li>
                 <a href="#pricing" className="text-gray-300 hover:text-white transition-colors block py-2" onClick={() => setIsMobileMenuOpen(false)}>
-                  Pricing
+                  定价
                 </a>
               </li>
               <li>
@@ -100,11 +95,8 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="pt-4 flex flex-col space-y-3">
-                <Button variant="ghost" className="text-gray-300 hover:text-white w-full justify-start">
-                  Login
-                </Button>
-                <Link to="#!">
-                  <Button className="bg-crypto-purple hover:bg-crypto-dark-purple text-white w-full">Buy Now</Button>
+                <Link to="/subscribe">
+                  <Button className="bg-crypto-purple hover:bg-crypto-dark-purple text-white w-full">即刻订阅</Button>
                 </Link>
               </li>
             </ul>
