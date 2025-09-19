@@ -3,8 +3,8 @@
 export const pricingPlans = [
   {
     name: "Creative Base",
-    price: { monthly: "$1000", annual: "$1000" },
-    description: "每周 10 小时，适合刚起步的团队。",
+    price: { monthly: "$2000", annual: "$2000" },
+    description: "每周 7 小时，适合刚起步的团队。",
     features: [
       "单一高优先级工作流",
       "资深水准落地执行",
@@ -16,7 +16,7 @@ export const pricingPlans = [
   },
   {
     name: "Creative Pro",
-    price: { monthly: "$3000", annual: "$3000" },
+    price: { monthly: "$4000", annual: "$4000" },
     description: "每周 20 小时，适合构建与增长期团队。",
     features: [
       "加倍节奏与产出",
@@ -32,7 +32,7 @@ export const pricingPlans = [
   },
   {
     name: "Creative Enterprise",
-    price: { monthly: "$5000", annual: "$5000" },
+    price: { monthly: "$7000", annual: "$7000" },
     description: "每周 30 小时，创始人与高标准团队的首选。",
     features: [
       "协助竞品分析，市场分析",
