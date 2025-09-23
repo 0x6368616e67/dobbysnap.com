@@ -16,6 +16,7 @@ const Footer = () => {
               面向初创团队的「全生命周期 MVP 引擎」。精灵响指一啪，从 0 到 1 极速验证；需求突变，我们并行切换赛道，持续迭代、复利升级。无论市场转向、方向大调，始终陪你把灵感一步步炼成可用产品，让增长每一步都有魔法加速。
             </p>
             <div className="flex space-x-4">
+          {/*           
               <a href="#!" className="text-gray-400 hover:text-crypto-purple transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
@@ -32,7 +33,8 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="#!" className="text-gray-400 hover:text-crypto-purple transition-colors">
+            */}
+              <a href="https://github.com/DobbySnap" className="text-gray-400 hover:text-crypto-purple transition-colors">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </a>
